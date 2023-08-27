@@ -23,8 +23,8 @@ __metadata:
   linkType: hard
 
 "@anansi/babel-preset@npm:*":
-  version: 4.2.13
-  resolution: "@anansi/babel-preset@npm:4.2.13"
+  version: 4.2.14
+  resolution: "@anansi/babel-preset@npm:4.2.14"
   dependencies:
     "@anansi/ts-utils": ^0.3.6
     "@babel/plugin-proposal-class-properties": ^7.18.6
@@ -42,7 +42,7 @@ __metadata:
     "@babel/plugin-transform-react-constant-elements": ^7.22.5
     "@babel/plugin-transform-react-inline-elements": ^7.22.5
     "@babel/plugin-transform-runtime": ^7.22.10
-    "@babel/plugin-transform-typescript": ^7.22.10
+    "@babel/plugin-transform-typescript": ^7.22.11
     "@babel/preset-env": ^7.22.10
     "@babel/preset-react": ^7.22.5
     babel-plugin-macros: ^3.1.0
@@ -87,7 +87,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 5d9b790e0ff2acc09b7043db1dc99eb9a301207726a79a02052d4804f84fb5058e133508d1aac232e6cc1215356d7bd4023130be83a75ad720537b5f1737774b
+  checksum: c6d01caf224361f5f6133641f274ee7c5b4dd826ec3a19c7e79cbd47c49ee24ea43489c8fc3e29f6a852199f1e9338c39dba9e4193ba11ba6b348ebf9ff1bf30
   languageName: node
   linkType: hard
 
@@ -256,17 +256,17 @@ __metadata:
   linkType: hard
 
 "@anansi/webpack-config@npm:*":
-  version: 15.0.31
-  resolution: "@anansi/webpack-config@npm:15.0.31"
+  version: 15.0.32
+  resolution: "@anansi/webpack-config@npm:15.0.32"
   dependencies:
     "@babel/runtime": ^7.17.2
     "@linaria/webpack5-loader": 4.1.17
-    "@pmmmwh/react-refresh-webpack-plugin": ^0.5.10
-    "@svgr/webpack": ^8.0.1
+    "@pmmmwh/react-refresh-webpack-plugin": ^0.5.11
+    "@svgr/webpack": ^8.1.0
     "@types/webpack-bundle-analyzer": ^4.6.0
     "@vue/preload-webpack-plugin": ^2.0.0
     assert: ^2.0.0
-    autoprefixer: ^10.4.14
+    autoprefixer: ^10.4.15
     babel-loader: ^9.1.3
     browserify-zlib: ^0.2.0
     buffer: ^6.0.3
@@ -292,9 +292,9 @@ __metadata:
     os-browserify: ^0.3.0
     path: ^0.12.7
     path-browserify: ^1.0.1
-    postcss: ^8.4.27
+    postcss: ^8.4.28
     postcss-loader: ^7.3.3
-    postcss-preset-env: ^9.1.0
+    postcss-preset-env: ^9.1.1
     process: ^0.11.10
     punycode: ^2.3.0
     querystring-es3: ^0.2.1
@@ -362,7 +362,7 @@ __metadata:
       optional: true
     webpack-dev-server:
       optional: true
-  checksum: bfd40e7fea218be52341e782413e3ce0732712024cb8958815c65403dcff1ddc2352935c73f5558d06c2b5e3d8b0c05e7582a9673f9c1ce7884015ef748f84f7
+  checksum: d275cee2db6c1c9d554b8861dece6bef788b67066f861296d47b26b5d7da9730db7c1794d14b6b920818c637f2af74486337a9d41829274e03087fa1ad7374d9
   languageName: node
   linkType: hard
 
@@ -1767,7 +1767,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-typescript@npm:^7.22.10, @babel/plugin-transform-typescript@npm:^7.22.11":
+"@babel/plugin-transform-typescript@npm:^7.22.11":
   version: 7.22.11
   resolution: "@babel/plugin-transform-typescript@npm:7.22.11"
   dependencies:
@@ -2396,16 +2396,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@data-client/endpoint@npm:^0.2.0":
-  version: 0.2.7
-  resolution: "@data-client/endpoint@npm:0.2.7"
-  dependencies:
-    "@babel/runtime": ^7.17.0
-  checksum: 6171a746def05d4d2b8583dc5a41ccf8b8ce52eef57c778339ef5d5fe61193926371b7ce2548124fec64f8701c35cada6ac2cd6348c3a4058f8da5328d326dbe
-  languageName: node
-  linkType: hard
-
-"@data-client/endpoint@npm:^0.2.8":
+"@data-client/endpoint@npm:^0.2.0, @data-client/endpoint@npm:^0.2.8":
   version: 0.2.8
   resolution: "@data-client/endpoint@npm:0.2.8"
   dependencies:
@@ -3311,7 +3302,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pmmmwh/react-refresh-webpack-plugin@npm:^0.5.10":
+"@pmmmwh/react-refresh-webpack-plugin@npm:^0.5.11":
   version: 0.5.11
   resolution: "@pmmmwh/react-refresh-webpack-plugin@npm:0.5.11"
   dependencies:
@@ -3613,7 +3604,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@svgr/webpack@npm:^8.0.1":
+"@svgr/webpack@npm:^8.1.0":
   version: 8.1.0
   resolution: "@svgr/webpack@npm:8.1.0"
   dependencies:
@@ -5113,7 +5104,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:^10.4.14":
+"autoprefixer@npm:^10.4.14, autoprefixer@npm:^10.4.15":
   version: 10.4.15
   resolution: "autoprefixer@npm:10.4.15"
   dependencies:
@@ -14189,7 +14180,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-preset-env@npm:^9.1.0":
+"postcss-preset-env@npm:^9.1.1":
   version: 9.1.1
   resolution: "postcss-preset-env@npm:9.1.1"
   dependencies:
@@ -14350,7 +14341,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.21, postcss@npm:^8.4.24, postcss@npm:^8.4.27":
+"postcss@npm:^8.4.21, postcss@npm:^8.4.24, postcss@npm:^8.4.28":
   version: 8.4.28
   resolution: "postcss@npm:8.4.28"
   dependencies:
