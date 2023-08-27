@@ -1,7 +1,7 @@
 import {
   laySpouts,
   documentSpout,
-  restHooksSpout,
+  dataClientSpout,
   prefetchSpout,
   routerSpout,
   JSONSpout,
@@ -31,7 +31,7 @@ const spouts = prefetchSpout('controller')(
     csPolicy,
   })(
     JSONSpout()(
-      restHooksSpout()(
+      dataClientSpout()(
         routerSpout({ useResolveWith: useController, createRouter })(
           appSpout(app),
         ),

@@ -7,7 +7,7 @@ class FloatSerializer extends Number {
   }
 }
 
-// Visit https://resthooks.io/docs/guides/resource-types to read more about these definitions
+// Visit https://dataclient.io/rest to read more about these definitions
 export class Ticker extends Entity {
   product_id = '';
   trade_id = 0;

@@ -23,7 +23,7 @@ export const routes: Route<Controller>[] = [
     component: lazyPage('Home'),
     async resolveData(controller) {
       const product_id = `${'BTC'}-USD`;
-      await controller.fetch(getTicker, { product_id });
+      await controller.fetchIfStale(getTicker, { product_id });
     },
   },
   {

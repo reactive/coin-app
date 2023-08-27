@@ -1,7 +1,7 @@
 import {
   floodSpouts,
   documentSpout,
-  restHooksSpout,
+  dataClientSpout,
   routerSpout,
   JSONSpout,
   appSpout,
@@ -26,7 +26,7 @@ const app = (
 
 const spouts = JSONSpout()(
   documentSpout({ title: 'Coinbase Lite' })(
-    restHooksSpout({
+    dataClientSpout({
       getManagers: () => {
         return [
           new StreamManager(
