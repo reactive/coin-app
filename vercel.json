@@ -5,7 +5,6 @@
   "outputDirectory": "dist",
   "functions": {
     "api/*.mjs": {
-      "includeFiles": "dist-server/*",
       "memory": 1024,
       "maxDuration": 10
     }
