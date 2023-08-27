@@ -5,6 +5,7 @@
   "outputDirectory": "dist",
   "functions": {
     "api/*.mjs": {
+      "includeFiles": "(dist-server/*|node_modules/**)",
       "memory": 1024,
       "maxDuration": 10
     }
