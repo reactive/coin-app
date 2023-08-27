@@ -175,14 +175,14 @@ __metadata:
   linkType: hard
 
 "@anansi/eslint-plugin@npm:*":
-  version: 0.16.26
-  resolution: "@anansi/eslint-plugin@npm:0.16.26"
+  version: 0.16.27
+  resolution: "@anansi/eslint-plugin@npm:0.16.27"
   dependencies:
-    "@babel/eslint-parser": ^7.22.10
-    "@typescript-eslint/parser": ^6.3.0
+    "@babel/eslint-parser": ^7.22.11
+    "@typescript-eslint/parser": ^6.4.1
     eslint-config-prettier: ^9.0.0
     eslint-import-resolver-typescript: ^3.6.0
-    eslint-import-resolver-webpack: ^0.13.4
+    eslint-import-resolver-webpack: ^0.13.7
     eslint-plugin-jsx-a11y: ^6.7.1
   peerDependencies:
     "@babel/core": ^7.0.0
@@ -203,7 +203,7 @@ __metadata:
       optional: true
     webpack:
       optional: true
-  checksum: 25f50352ddcd365000a2a012235706f65941baaa4cef335213df5ad08c3bf6bc65ae25863634b3f7f1e901ae486e7de6b3a2c16a54339413cb23499c1ae817f6
+  checksum: eeed2237a791bbe1d3fbb0fd324c2fd05e12a8dcda38078b12bb58e1af7a390cfcda7fb623d021f5bd2ed6b697c6172cc433523c54d3e9e52bab6bacc71699e4
   languageName: node
   linkType: hard
 
@@ -406,7 +406,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/eslint-parser@npm:^7.22.10":
+"@babel/eslint-parser@npm:^7.22.11":
   version: 7.22.11
   resolution: "@babel/eslint-parser@npm:7.22.11"
   dependencies:
@@ -4268,7 +4268,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:*, @typescript-eslint/parser@npm:^6.3.0":
+"@typescript-eslint/parser@npm:*, @typescript-eslint/parser@npm:^6.4.1":
   version: 6.4.1
   resolution: "@typescript-eslint/parser@npm:6.4.1"
   dependencies:
@@ -7985,7 +7985,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-import-resolver-webpack@npm:^0.13.4":
+"eslint-import-resolver-webpack@npm:^0.13.7":
   version: 0.13.7
   resolution: "eslint-import-resolver-webpack@npm:0.13.7"
   dependencies:
