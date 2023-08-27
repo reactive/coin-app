@@ -1,0 +1,13 @@
+{
+  "installCommand": "yarn install",
+  "buildCommand": "yarn build && yarn build:server",
+  "outputDirectory": "dist",
+  "functions": {
+    "api/*.mjs": {
+      "includeFiles": "dist-server/*",
+      "memory": 3008,
+      "maxDuration": 30
+    }
+  },
+  "cleanUrls": true
+}

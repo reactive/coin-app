@@ -1,0 +1,19 @@
+{
+  "@anansi/generator-js": {
+    "githubOrg": "ntucker",
+    "rootPath": "src",
+    "assetPath": "dist",
+    "serverPath": "dist-server",
+    "appName": "coinbase-lite",
+    "githubDomain": "github.com",
+    "testing": false,
+    "features": [
+      "SSR"
+    ],
+    "badges": "",
+    "spa": true,
+    "webpack": true,
+    "style": "linaria",
+    "devssl": false
+  }
+}
