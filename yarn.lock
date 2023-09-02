@@ -98,7 +98,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@anansi/cli@npm:*":
+"@anansi/cli@npm:^3.0.14":
   version: 3.0.14
   resolution: "@anansi/cli@npm:3.0.14"
   dependencies:
@@ -121,11 +121,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@anansi/core@npm:*":
-  version: 0.18.2
-  resolution: "@anansi/core@npm:0.18.2"
+"@anansi/core@npm:^0.18.3":
+  version: 0.18.3
+  resolution: "@anansi/core@npm:0.18.3"
   dependencies:
-    "@anansi/router": ^0.9.0
+    "@anansi/router": ^0.9.1
     "@babel/runtime": ^7.17.0
     "@data-client/ssr": ^0.2.1
     chalk: ^4.1.2
@@ -170,7 +170,7 @@ __metadata:
   bin:
     serve-anansi: ./lib/scripts/serve.js
     start-anansi: ./lib/scripts/startDevserver.js
-  checksum: 6091b6860ed3012381b0ae423e082c7a53c59e965b77f89493c1d0c2ea98bfbd59c4483a48ae12ae4ccf795a61a8e9d14e3cd1ba338f0e1e5378cdf69dbc5cec
+  checksum: dc0cec9cb86338c5937977e0d65d96d3072130679e758ddaa0e056e2aca3075ac1d83d6c42d79f3a3e9b93b5864905816a3b6fcd465bb82fff39f6cc42ef6fb5
   languageName: node
   linkType: hard
 
@@ -228,21 +228,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@anansi/router@npm:*, @anansi/router@npm:^0.9.0":
-  version: 0.9.0
-  resolution: "@anansi/router@npm:0.9.0"
+"@anansi/router@npm:^0.9.1":
+  version: 0.9.1
+  resolution: "@anansi/router@npm:0.9.1"
   dependencies:
     "@babel/runtime": ^7.17.0
     "@pojo-router/core": ^0.6.1
     history: ^5.3.0
-    nano-memoize: ^3.0.13
+    nano-memoize: ^3.0.14
   peerDependencies:
     "@types/react": ^18.0.0
     react: ^18.0.0
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 4c0b35d8fd6841fea8bd675f8aebc0e734270747f306354f373440ec2f109a59953c88fe14e53b0a70e5d1b37343a52ac6f76ec0afcb4fc125f49ee626c3144e
+  checksum: cc173b5da2c5831b397483de90925b842c6410e95d1e6421bf8a5ecb6611543fbfa00ccf2991669611b609ecc3258311e07c31be98eb0ad01434913b3ec82d04
   languageName: node
   linkType: hard
 
@@ -2385,58 +2385,58 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@data-client/core@npm:^0.4.1, @data-client/core@npm:^0.4.3":
-  version: 0.4.3
-  resolution: "@data-client/core@npm:0.4.3"
+"@data-client/core@npm:^0.8.1":
+  version: 0.8.1
+  resolution: "@data-client/core@npm:0.8.1"
   dependencies:
     "@babel/runtime": ^7.17.0
-    "@data-client/normalizr": ^0.2.2
+    "@data-client/normalizr": ^0.8.0
     flux-standard-action: ^2.1.1
-  checksum: 09f66eff14858c01349a54861e1510e013e68e1541d63b723849c5795f82f25004baf35f2bb5447d228aa08cf4331caafd8da1e24c9b023d3ffc3fa72c18e1ce
+  checksum: 10636689f8a553297b808a7d931799a99eea64d98e2b8a86db09f3c2de43bac92a7de11bff7f50eb667d68343a992fd32a2e29ad9b2ee6489abc3603233b83f1
   languageName: node
   linkType: hard
 
-"@data-client/endpoint@npm:^0.2.0, @data-client/endpoint@npm:^0.2.8":
-  version: 0.2.8
-  resolution: "@data-client/endpoint@npm:0.2.8"
+"@data-client/endpoint@npm:^0.8.0, @data-client/endpoint@npm:^0.8.2":
+  version: 0.8.2
+  resolution: "@data-client/endpoint@npm:0.8.2"
   dependencies:
     "@babel/runtime": ^7.17.0
-  checksum: 9b23a5e66b55b58704dcf410557ad9262cee75d55714a54396e0aebbe05547a0137fb03deae3a3221d4e09f290b21b36955ecbf3a874728842e06773ac57f6a1
+  checksum: d482cf8ff508129cd8e8d3b293539344c917631e5aa287c7e8a62846680303bb654178fc9e3aab290f290a7b4665b775e994412d37d252b0692da601f09355d1
   languageName: node
   linkType: hard
 
-"@data-client/img@npm:*":
-  version: 0.2.1
-  resolution: "@data-client/img@npm:0.2.1"
+"@data-client/img@npm:^0.8.1":
+  version: 0.8.1
+  resolution: "@data-client/img@npm:0.8.1"
   dependencies:
     "@babel/runtime": ^7.17.0
-    "@data-client/endpoint": ^0.2.0
+    "@data-client/endpoint": ^0.8.0
   peerDependencies:
-    "@data-client/react": ^0.1.0 || ^0.2.0 || ^0.3.0 || ^0.4.0
+    "@data-client/react": ^0.1.0 || ^0.2.0 || ^0.3.0 || ^0.4.0 || ^0.5.0 || ^0.7.0 || ^0.8.0
     "@types/react": ^16.8.4 || ^17.0.0 || ^18.0.0-0
     react: ^16.8.4 || ^17.0.0 || ^18.0.0-0
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 11e9812657619bd2c6812d4ed7614c0350413195edb5bd30fa0a614da035f2af56f0128e83dd0be35fc426b17a3791f9cf49309e4c8f0838f8cae64e3339ddb2
+  checksum: 741213345c6950e8f7f8ec1e075e4812fbec7c2d463dd3d3b1f043d0171a20f5598909498f14454c9c96ec48300837cb5c98c1ef2583e505eacfe82cd88e53ec
   languageName: node
   linkType: hard
 
-"@data-client/normalizr@npm:^0.2.2":
-  version: 0.2.2
-  resolution: "@data-client/normalizr@npm:0.2.2"
+"@data-client/normalizr@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "@data-client/normalizr@npm:0.8.0"
   dependencies:
     "@babel/runtime": ^7.17.0
-  checksum: aa75a6382404677e39fa2b77d594521df4ed19f21262e97968720a764284329cb4fbd921d5dc1438b6d4710050345e54cd56aa6083e58a0dac96a2ccd06880ba
+  checksum: 9dbdd6b0a042a7a63de2d06e27376cbefa0f856f70578c332da0db5217e5718612cbdd5988e5a01830ea344785d2c18cdb3420f02b27a007e981fd58966b6629
   languageName: node
   linkType: hard
 
-"@data-client/react@npm:*":
-  version: 0.4.3
-  resolution: "@data-client/react@npm:0.4.3"
+"@data-client/react@npm:^0.8.1":
+  version: 0.8.1
+  resolution: "@data-client/react@npm:0.8.1"
   dependencies:
     "@babel/runtime": ^7.17.0
-    "@data-client/core": ^0.4.3
+    "@data-client/core": ^0.8.1
     "@data-client/use-enhanced-reducer": ^0.1.0
   peerDependencies:
     "@react-navigation/native": ^6.0.0
@@ -2447,36 +2447,36 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: 8266ae4b76f0d9f6c534b8968677840c817af38a135f8f88d5099f4cb97880988aa0e74b8eaae9293e6bf745201d2a924ea487507028728a2a1e22e3e781da58
+  checksum: 14fbb4121c3f3d3e73c3eca95b1addff771b35ae8c6780ab1fcfad4bc2330659c27a566220635b907b64375d14efe71d75f1fdbf61216752194947fa570288cd
   languageName: node
   linkType: hard
 
-"@data-client/redux@npm:*":
-  version: 0.2.2
-  resolution: "@data-client/redux@npm:0.2.2"
+"@data-client/redux@npm:^0.8.1":
+  version: 0.8.1
+  resolution: "@data-client/redux@npm:0.8.1"
   dependencies:
     "@babel/runtime": ^7.17.0
-    "@data-client/core": ^0.4.1
+    "@data-client/core": ^0.8.1
   peerDependencies:
-    "@data-client/react": ^0.1.0 || ^0.2.0 || ^0.3.0 || ^0.4.0
+    "@data-client/react": ^0.1.0 || ^0.2.0 || ^0.3.0 || ^0.4.0 || ^0.5.0 || ^0.7.0 || ^0.8.0
     "@types/react": ^16.8.4 || ^17.0.0 || ^18.0.0
     react: ^16.8.4 || ^17.0.0 || ^18.0.0
     redux: ^4.0.0
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 84b6f313922d61888ecd8f0a3ab246f4b1aaa54841add32ecdae8552859ee84d2b54e2e81e6e58ddaa96d8414dc03917e7addf7d1aeb79db5bd7bbd7c26dfd99
+  checksum: efb140a574ca04d334d7b9317a4238c3d7c677aefce400c11801ff48afef03e9cb19db09122265c763026e692a2c55435033413b6f2f3a6a61d25b0c68fd65ea
   languageName: node
   linkType: hard
 
-"@data-client/rest@npm:*":
-  version: 0.7.6
-  resolution: "@data-client/rest@npm:0.7.6"
+"@data-client/rest@npm:^0.8.1":
+  version: 0.8.2
+  resolution: "@data-client/rest@npm:0.8.2"
   dependencies:
     "@babel/runtime": ^7.17.0
-    "@data-client/endpoint": ^0.2.8
+    "@data-client/endpoint": ^0.8.2
     path-to-regexp: ^6.2.1
-  checksum: b16910aed2ecbc886388d43cdb0e5169fdf182fd01283174b079ef1283812c2d70654c016794a2f7905cd7c4aa46aaf2f042c68fa8475b5e287afe690a6925a8
+  checksum: b8b7dfb4b55d7466bfef3a3b971af7293984f0636360ea0852d102005440e32ff0c518e49424e1a7b2849386c69313e477c4803e834b960d4bbb6b53f94cde21
   languageName: node
   linkType: hard
 
@@ -6329,17 +6329,17 @@ __metadata:
   dependencies:
     "@anansi/babel-preset": "*"
     "@anansi/browserslist-config": "*"
-    "@anansi/cli": "*"
-    "@anansi/core": "*"
+    "@anansi/cli": ^3.0.14
+    "@anansi/core": ^0.18.3
     "@anansi/eslint-plugin": "*"
-    "@anansi/router": "*"
+    "@anansi/router": ^0.9.1
     "@anansi/webpack-config": "*"
     "@babel/core": "*"
     "@babel/runtime": "*"
-    "@data-client/img": "*"
-    "@data-client/react": "*"
-    "@data-client/redux": "*"
-    "@data-client/rest": "*"
+    "@data-client/img": ^0.8.1
+    "@data-client/react": ^0.8.1
+    "@data-client/redux": ^0.8.1
+    "@data-client/rest": ^0.8.1
     "@data-client/test": "*"
     "@linaria/babel-preset": "*"
     "@linaria/core": "*"
@@ -6357,7 +6357,7 @@ __metadata:
     eslint-plugin-react: ^7.22.0
     eslint-plugin-react-hooks: ^4.2.0
     history: "*"
-    prettier: ^2.2.1 || ^3.0.0
+    prettier: ^3.0.0
     react: "*"
     react-dom: "*"
     react-refresh: "*"
@@ -12333,10 +12333,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nano-memoize@npm:^3.0.13":
-  version: 3.0.13
-  resolution: "nano-memoize@npm:3.0.13"
-  checksum: ecc55a0d6d424aea28478c6244b2b43ada04940092044097471e176f876041381f2160d5f6610fe59ba39d850ea7c98b6324cd21c1061e7bb769a7f779749fb2
+"nano-memoize@npm:^3.0.14":
+  version: 3.0.14
+  resolution: "nano-memoize@npm:3.0.14"
+  checksum: 165c91041deaf197ae338e10489a9c028101bd0721a06686dcb12a8efabced22f70ca1d4ff24e6d78e52710f12f9fa5c991b4084dbdcd51819ce86f4b2a00f21
   languageName: node
   linkType: hard
 
@@ -14634,7 +14634,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.2.1 || ^3.0.0, prettier@npm:^3.0.0":
+"prettier@npm:^3.0.0":
   version: 3.0.2
   resolution: "prettier@npm:3.0.2"
   bin:

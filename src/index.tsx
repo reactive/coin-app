@@ -10,6 +10,7 @@ import {
   useController,
   AsyncBoundary,
   CacheProvider,
+  getDefaultManagers,
 } from '@data-client/react';
 
 import StreamManager from 'api/StreamManager';
@@ -33,7 +34,7 @@ const spouts = JSONSpout()(
             new WebSocket('wss://ws-feed.exchange.coinbase.com'),
             { ticker: getTicker },
           ),
-          ...CacheProvider.defaultProps.managers,
+          ...getDefaultManagers(),
         ];
       },
     })(

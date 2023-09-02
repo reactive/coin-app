@@ -2,11 +2,7 @@
 //https://api.exchange.coinbase.com/products/stats
 
 import { Entity, createResource, schema } from '@data-client/rest';
-class FloatSerializer extends Number {
-  constructor(v: any) {
-    super(Number.parseFloat(v));
-  }
-}
+
 export class Stats extends Entity {
   id = '';
   open = '26031.15';
@@ -22,12 +18,11 @@ export class Stats extends Entity {
 
   static key = 'Stats';
   static schema = {
-    volume: FloatSerializer,
-    volume_30day: FloatSerializer,
+    volume: Number,
+    volume_30day: Number,
   };
 
   process(value: any, parent: any, key: string, args: any[]) {
-    console.log();
     return { ...value, id: value.id ?? key ?? args[0]?.id };
   }
 }

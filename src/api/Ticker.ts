@@ -1,12 +1,6 @@
 import { Entity, RestEndpoint } from '@data-client/rest';
 import type { FixtureEndpoint } from '@data-client/test';
 
-class FloatSerializer extends Number {
-  constructor(v: any) {
-    super(Number.parseFloat(v));
-  }
-}
-
 // Visit https://dataclient.io/rest to read more about these definitions
 export class Ticker extends Entity {
   product_id = '';
@@ -28,8 +22,8 @@ export class Ticker extends Entity {
   // convert price to a float and time to a Date
   // see https://dataclient.io/rest/api/Entity#schema
   static schema = {
-    price: FloatSerializer,
-    time: Date,
+    price: Number,
+    time: (iso: string) => new Date(iso),
   };
 
   // Use server timings to ensure zero race conditions
@@ -42,55 +36,24 @@ export class Ticker extends Entity {
     return existing.time > incoming.time;
   }
 
-  // stolen from schema.Entity
-  static mergeWithStore(
-    existingMeta: {
-      date: number;
-      fetchedAt: number;
-    },
-    incomingMeta: { date: number; fetchedAt: number },
-    existing: any,
-    incoming: any,
-  ) {
-    const useIncoming = this.useIncoming(
-      existingMeta,
-      incomingMeta,
-      existing,
-      incoming,
-    );
-
-    if (useIncoming) {
-      // distinct types are not mergeable (like delete symbol), so just replace
-      if (typeof incoming !== typeof existing) {
-        return incoming;
-      } else {
-        return this.shouldReorder(
-          existingMeta,
-          incomingMeta,
-          existing,
-          incoming,
-        )
-          ? this.merge(incoming, existing)
-          : this.merge(existing, incoming);
-      }
-    } else {
-      return existing;
+  static process(
+    input: any,
+    parent: any,
+    key: string | undefined,
+    args: any[],
+  ): any {
+    const value = { ...input };
+    if (args[0].product_id) {
+      value.product_id = args[0].product_id;
     }
+    return value;
   }
-
-  /*static process(input: any, parent: any, key: string | undefined): any {
-    return { ...input };
-  }*/
 }
 
 export const getTicker = new RestEndpoint({
   urlPrefix: 'https://api.exchange.coinbase.com',
   path: '/products/:product_id/ticker',
   schema: Ticker,
-  process(value, { product_id }) {
-    value.product_id = product_id;
-    return value;
-  },
   channel: 'ticker_batch',
 });
 
