@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Provider from './Provider';
 import "./globals.css";
+import { AsyncBoundary } from "@data-client/react";
+import styles from './page.module.css'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,7 +29,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <div className={styles.page}>
+            <main className={styles.main}>
+
+        <Provider>
+          <AsyncBoundary>
+            {children}
+          </AsyncBoundary>
+        </Provider>
+        </main>
+        </div>
       </body>
     </html>
   );
