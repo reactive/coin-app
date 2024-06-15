@@ -8,17 +8,37 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "arrowParens": "avoid",
+    "experimentalTernaries": true
+  },
   "dependencies": {
+    "@data-client/react": "^0.12.15",
+    "@data-client/rest": "^0.12.8",
+    "clsx": "^2.1.1",
+    "d3": "^7.9.0",
+    "next": "15.0.0-canary.32",
     "react": "19.0.0-rc.0",
-    "react-dom": "19.0.0-rc.0",
-    "next": "15.0.0-canary.32"
+    "react-dom": "19.0.0-rc.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/d3": "^7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^7.13.0",
+    "@typescript-eslint/parser": "^7.13.0",
     "eslint": "^8",
-    "eslint-config-next": "15.0.0-canary.32"
-  }
+    "eslint-config-next": "15.0.0-canary.32",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.34.2",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "prettier": "^3.3.2",
+    "typescript": "^5"
+  },
+  "packageManager": "yarn@4.3.0+sha512.1606bef7c84bc7d83b8576063de2fd08f7d69f9939015bed800f9585a002390268ecc777e9feeba7e26e9556aef6beaad4806968db2182ab5dd3e955ab3b9a0b"
 }
