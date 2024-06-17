@@ -1,0 +1,32 @@
+.table {
+  border-collapse: collapse;
+  text-indent: initial;
+  line-height: 1.1;
+
+  thead {
+    font-size: 12px;
+  }
+
+  tbody {
+    tr {
+      cursor: pointer;
+      &:hover {
+        background-color: var(--light);
+        border: none;
+      }
+    }
+  }
+  td {
+    padding: 6px 2px;
+    margin: 0;
+    border: none;
+
+    small {
+      font-size: 90%;
+    }
+  }
+
+  .name {
+    font-weight: 600;
+  }
+}

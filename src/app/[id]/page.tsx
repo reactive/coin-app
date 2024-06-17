@@ -36,7 +36,7 @@ export default function AssetDetail({
             src={currency.icon}
             style={{ height: '1em', width: '1em', marginBottom: '-.1em' }}
           />{' '}
-          {currency.name}
+          {currency.name} <small>{currency.display_name}</small>
         </h1>
         <h2>
           <AssetPrice product_id={`${currency.id}-USD`} />

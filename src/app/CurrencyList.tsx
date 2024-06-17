@@ -12,27 +12,33 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import AssetPrice, { Gain24 } from './AssetPrice';
+import styles from './CurrencyList.module.scss';
+import { useRouter } from 'next/navigation';
 
 export default function CurrencyList() {
   useFetch(StatsResource.getList);
   useSuspense(CurrencyResource.getList);
   useSuspense(StatsResource.getList);
   const currencies = useQuery(queryCurrency);
+  const router = useRouter();
   if (!currencies) return null;
   return (
-    <table>
+    <table className={styles.table}>
       <thead>
         <tr>
-          <th></th>
+          <th align="right"></th>
           <th align="left">Name</th>
-          <th>Volume 30d</th>
+          <th>Volume (30d)</th>
           <th align="right">Price</th>
           <th align="right">24h %</th>
         </tr>
       </thead>
       <tbody>
         {currencies.slice(0, 25).map(currency => (
-          <tr key={currency.pk()}>
+          <tr
+            key={currency.pk()}
+            onClick={() => router.push(`/${currency.id}`)}
+          >
             <td>
               {currency.icon && (
                 <Image
@@ -43,8 +49,12 @@ export default function CurrencyList() {
                 />
               )}
             </td>
-            <td align="left">
-              <Link href={`/${currency.id}`}>{currency.name}</Link>
+            <td align="left" className={styles.name}>
+              <Link href={`/${currency.id}`}>
+                {currency.name}
+                <br />
+                <small>{currency.display_name}</small>
+              </Link>
             </td>
             <td align="right">
               {formatLargePrice.format(currency?.stats?.volume_usd)}

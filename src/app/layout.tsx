@@ -35,7 +35,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <div className={styles.page}>
-          <nav>
+          <nav className={styles.topNav}>
             <Link href="/">Coin</Link>
           </nav>
           <main className={styles.main}>

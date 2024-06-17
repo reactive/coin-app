@@ -123,9 +123,14 @@ export default class StreamManager implements Manager {
     this.product_ids = [];
   }
 
-  handleMessage(controller: Controller, msg: any) {
+  /** Every websocket message is sent here
+   *
+   * @param controller
+   * @param msg JSON parsed message
+   */
+  handleMessage(ctrl: Controller, msg: any) {
     if (msg.type in this.endpoints)
-      controller.setResponse(this.endpoints[msg.type], msg, msg);
+      ctrl.setResponse(this.endpoints[msg.type], msg, msg);
   }
 
   init() {

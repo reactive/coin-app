@@ -17,7 +17,7 @@ export class Ticker extends Entity {
   }
 
   // implementing `key` makes us robust against class name mangling
-  static key = 'Ticker';
+  static key = 'ticker';
 
   // convert price to a float and time to a Date
   // see https://dataclient.io/rest/api/Entity#schema

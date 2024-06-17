@@ -3,6 +3,7 @@
 import { formatPrice, formatLargePrice } from '@/components/formatters';
 import { StatsResource } from '@/resources/Stats';
 import { useSuspense } from '@data-client/react';
+import { Gain24 } from '../AssetPrice';
 
 export default function Stats({ id }: { id: string }) {
   const stats = useSuspense(StatsResource.get, { id });
@@ -20,6 +21,12 @@ export default function Stats({ id }: { id: string }) {
         <tr>
           <th align="right">volume</th>
           <td>{formatLargePrice.format(stats.volume_usd)}</td>
+        </tr>
+        <tr>
+          <th align="right">24h %</th>
+          <td>
+            <Gain24 product_id={id} />
+          </td>
         </tr>
       </tbody>
     </table>

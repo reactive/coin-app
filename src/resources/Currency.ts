@@ -28,6 +28,7 @@ export class Currency extends Entity {
 
   default_network = 'ethereum';
   supported_networks = [];
+  display_name = '';
 
   // faked for client-side join
   stats = Stats.fromJS();

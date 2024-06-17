@@ -22,7 +22,8 @@
     "d3": "^7.9.0",
     "next": "15.0.0-canary.32",
     "react": "19.0.0-rc.0",
-    "react-dom": "19.0.0-rc.0"
+    "react-dom": "19.0.0-rc.0",
+    "sass": "^1.77.5"
   },
   "devDependencies": {
     "@types/d3": "^7",
@@ -36,7 +37,6 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-react": "^7.34.2",
-    "eslint-plugin-react-hooks": "^4.6.2",
     "prettier": "^3.3.2",
     "typescript": "^5"
   },

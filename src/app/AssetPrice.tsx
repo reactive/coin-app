@@ -2,6 +2,7 @@ import { formatPrice, formatters } from '@/components/formatters';
 import { StatsResource } from '@/resources/Stats';
 import { getTicker } from '@/resources/Ticker';
 import { useCache, useSubscription } from '@data-client/react';
+import styles from './AssetPrice.module.css';
 
 export default function AssetPrice({ product_id }: Props) {
   const price = useLivePrice(product_id);
@@ -17,7 +18,8 @@ export function Gain24({ product_id }: Props) {
     ticker ? (ticker.price - ticker.open_24h) / ticker.open_24h
     : stats ? (stats.last - stats.open) / stats.open
     : 0;
-  return <span>{formatters.percentage(percentage)}</span>;
+  const className = percentage >= 0 ? styles.up : styles.down;
+  return <span className={className}>{formatters.percentage(percentage)}</span>;
 }
 
 interface Props {

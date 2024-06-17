@@ -1,12 +1,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --light: #ddd;
+  --dark: #222;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --light: #222;
+    --dark: #ccc;  
   }
 }
 
@@ -37,4 +41,9 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+small {
+  font-size: 70%;
+  color: var(--dark);
 }
