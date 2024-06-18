@@ -5,11 +5,12 @@ export class Ticker extends Entity {
   product_id = '';
   trade_id = 0;
   price = 0;
-  size = '0';
   time = new Date(0);
-  bid = '0';
-  ask = '0';
-  volume = '';
+  // last_size = '0';
+  // best_bid = '0';
+  // best_ask = '0';
+  // volume_24h = '';
+  // volume_30d = '';
   open_24h = 0;
 
   pk(): string {
@@ -48,6 +49,8 @@ export class Ticker extends Entity {
     if (args[0].product_id) {
       value.product_id = args[0].product_id;
     }
+    // fallback to current price to show no gain if we don't have 24 hour
+    if (!value.open_24h) value.open_24h = value.price;
     return value;
   }
 }

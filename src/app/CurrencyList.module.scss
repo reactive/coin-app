@@ -16,14 +16,24 @@
       }
     }
   }
-  td {
-    padding: 6px 2px;
+  td, th {
+    padding: 6px 3px;
     margin: 0;
     border: none;
 
     small {
       font-size: 90%;
     }
+
+    &:first-child {
+      padding-left: 8px;
+    }
+    &:last-child {
+      padding-right: 8px;
+    }
+  }
+  th {
+    padding: 0 3px;
   }
 
   .name {

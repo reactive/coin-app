@@ -14,14 +14,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@data-client/core@npm:^0.12.5":
-  version: 0.12.5
-  resolution: "@data-client/core@npm:0.12.5"
+"@data-client/core@npm:^0.13.0":
+  version: 0.13.0
+  resolution: "@data-client/core@npm:0.13.0"
   dependencies:
     "@babel/runtime": "npm:^7.17.0"
     "@data-client/normalizr": "npm:^0.12.3"
     flux-standard-action: "npm:^2.1.1"
-  checksum: 10c0/2950c37e72d7899780c4ba375ee74749edd79024b562a1afc335aa9fb8530fd20c0c8f0c4200a12fa57dfdede0616d175eed01a1bed1d4b9d12887bf843bd0d4
+  checksum: 10c0/adb808ef756c1c9f40ee6089cb4124ed069a6c04125015e8d66100bdda4d3c428bb74ed4d77cd01455675f0b7c0638ddb279578582931567351c2a7c79d546df
   languageName: node
   linkType: hard
 
@@ -43,12 +43,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@data-client/react@npm:^0.12.15":
-  version: 0.12.15
-  resolution: "@data-client/react@npm:0.12.15"
+"@data-client/react@npm:^0.13.0":
+  version: 0.13.0
+  resolution: "@data-client/react@npm:0.13.0"
   dependencies:
     "@babel/runtime": "npm:^7.17.0"
-    "@data-client/core": "npm:^0.12.5"
+    "@data-client/core": "npm:^0.13.0"
     "@data-client/use-enhanced-reducer": "npm:^0.1.10"
   peerDependencies:
     "@react-navigation/native": ^6.0.0
@@ -59,7 +59,7 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: 10c0/e20d1582ec426616f867a01c7b638096c4e18a95264bf068b922fb587203fb065542b4377c83ee20063f91aa5429a665ef651c1fe99712e1ed2a56e86664c070
+  checksum: 10c0/47578e023753a0c58a3fc0e669c3c9d7c1106939a8844c81633196c66579b60d11a289841c04831a9ee8390c1bcdd884f35a4ae3d10cf4d9e408a67d7671d2b1
   languageName: node
   linkType: hard
 
@@ -1447,7 +1447,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "coin@workspace:."
   dependencies:
-    "@data-client/react": "npm:^0.12.15"
+    "@data-client/react": "npm:^0.13.0"
     "@data-client/rest": "npm:^0.12.8"
     "@types/d3": "npm:^7"
     "@types/node": "npm:^20"

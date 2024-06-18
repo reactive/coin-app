@@ -1,6 +1,6 @@
 'use client';
 import StreamManager from '@/resources/StreamManager';
-import { getTicker } from '@/resources/Ticker';
+import { Ticker } from '@/resources/Ticker';
 import { DevToolsManager, getDefaultManagers } from '@data-client/react';
 import { DataProvider } from '@data-client/react/nextjs';
 
@@ -24,7 +24,7 @@ const managers =
       new StreamManager(
         () => new WebSocket('wss://ws-feed.exchange.coinbase.com'),
         {
-          ticker: getTicker,
+          ticker: Ticker,
         },
       ),
       ...getManagers(),

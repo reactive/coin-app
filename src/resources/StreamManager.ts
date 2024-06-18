@@ -1,4 +1,4 @@
-import type { EndpointInterface } from '@data-client/rest';
+import type { Entity } from '@data-client/rest';
 
 import type { Manager, Middleware } from '@data-client/react';
 import { ActionTypes, Controller, actionTypes } from '@data-client/react';
@@ -10,7 +10,7 @@ import { ActionTypes, Controller, actionTypes } from '@data-client/react';
 export default class StreamManager implements Manager {
   protected declare middleware: Middleware<ActionTypes>;
   protected declare evtSource: WebSocket; // | EventSource;
-  protected declare endpoints: Record<string, EndpointInterface>;
+  protected declare entities: Record<string, typeof Entity>;
   protected msgQueue: (string | ArrayBufferLike | Blob | ArrayBufferView)[] =
     [];
 
@@ -20,9 +20,9 @@ export default class StreamManager implements Manager {
 
   constructor(
     evtSource: () => WebSocket, // | EventSource,
-    endpoints: Record<string, EndpointInterface>,
+    entities: Record<string, typeof Entity>,
   ) {
-    this.endpoints = endpoints;
+    this.entities = entities;
 
     this.middleware = controller => {
       this.connect = () => {
@@ -56,8 +56,9 @@ export default class StreamManager implements Manager {
           case actionTypes.SUBSCRIBE_TYPE:
             // only process registered endpoints
             if (
-              !Object.values(this.endpoints).find(
-                endpoint => endpoint.key === action.endpoint.key,
+              !Object.values(this.entities).find(
+                // @ts-expect-error
+                entity => entity.key === action.endpoint.schema?.key,
               )
             )
               break;
@@ -71,8 +72,9 @@ export default class StreamManager implements Manager {
           case actionTypes.UNSUBSCRIBE_TYPE:
             // only process registered endpoints
             if (
-              !Object.values(this.endpoints).find(
-                endpoint => endpoint.key === action.endpoint.key,
+              !Object.values(this.entities).find(
+                // @ts-expect-error
+                entity => entity.key === action.endpoint.schema?.key,
               )
             )
               break;
@@ -129,8 +131,9 @@ export default class StreamManager implements Manager {
    * @param msg JSON parsed message
    */
   handleMessage(ctrl: Controller, msg: any) {
-    if (msg.type in this.endpoints)
-      ctrl.setResponse(this.endpoints[msg.type], msg, msg);
+    if (msg.type in this.entities) {
+      ctrl.set(this.entities[msg.type], msg, msg);
+    }
   }
 
   init() {
