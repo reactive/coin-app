@@ -7,11 +7,6 @@ import { DataProvider } from '@data-client/react/nextjs';
 const getManagers =
   process.env.NODE_ENV === 'development' ?
     () => [
-      new DevToolsManager(
-        undefined,
-        // @ts-ignore
-        action => action?.endpoint?.channel === 'ticker',
-      ),
       ...getDefaultManagers().filter(
         mgr => mgr.constructor.name !== 'DevToolsManager',
       ),
@@ -19,7 +14,7 @@ const getManagers =
   : getDefaultManagers;
 
 const managers =
-  typeof window === 'undefined' ? getDefaultManagers() : (
+  typeof window === 'undefined' ? getManagers() : (
     [
       new StreamManager(
         () => new WebSocket('wss://ws-feed.exchange.coinbase.com'),
