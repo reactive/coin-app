@@ -4,7 +4,7 @@ import { lazy } from 'react';
 import { getCandles } from '@/resources/Candles';
 import { useLive } from '@data-client/react';
 
-const LineChart = lazy(() => import('./LineChart'));
+const LineChart = lazy(() => import(/* webpackPreload: true */ './LineChart'));
 
 export default function AssetChart({ product_id, width, height }: Props) {
   const candles = useLive(getCandles, { product_id });
