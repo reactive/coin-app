@@ -14,23 +14,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@data-client/core@npm:^0.14.2":
-  version: 0.14.2
-  resolution: "@data-client/core@npm:0.14.2"
+"@data-client/core@npm:^0.14.4":
+  version: 0.14.4
+  resolution: "@data-client/core@npm:0.14.4"
   dependencies:
     "@babel/runtime": "npm:^7.17.0"
     "@data-client/normalizr": "npm:^0.14.1"
     flux-standard-action: "npm:^2.1.1"
-  checksum: 10c0/4bde29b3038ad9b7eed888cc0d61f55bac6237d62eefa1f0f38c00484a041b6c5e534546f23c4bc7fcd074a5350ff346fe43279485fc81d2084599a016e87952
+  checksum: 10c0/d1673af35528b5560995c820f9186b17ba61653fd76d0741b4dcb864898e8264130b57c73549f17a7e60438effe3a96466f24c1c3f6fad6495dd49202f989b54
   languageName: node
   linkType: hard
 
-"@data-client/endpoint@npm:^0.14.1":
-  version: 0.14.1
-  resolution: "@data-client/endpoint@npm:0.14.1"
+"@data-client/endpoint@npm:^0.14.4":
+  version: 0.14.4
+  resolution: "@data-client/endpoint@npm:0.14.4"
   dependencies:
     "@babel/runtime": "npm:^7.17.0"
-  checksum: 10c0/04f0491a98f777d34b62c2e2ea7844525f3b8e9b81df9d081d2ce6df68ef97a15c993a637461829dabc8b1032de40927bd0e0da64c1a4bddc093bb2fa3f02378
+  checksum: 10c0/e4fcc82218bab8739055cc5980a1f78c81555448a4a4c4c671c5f25e24e62f8119481e115a2ca86756b3d3a679e07f6df3a244af8a5342ee3c810dad6f8d9711
   languageName: node
   linkType: hard
 
@@ -43,12 +43,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@data-client/react@npm:^0.14.2":
-  version: 0.14.2
-  resolution: "@data-client/react@npm:0.14.2"
+"@data-client/react@npm:^0.14.4":
+  version: 0.14.4
+  resolution: "@data-client/react@npm:0.14.4"
   dependencies:
     "@babel/runtime": "npm:^7.17.0"
-    "@data-client/core": "npm:^0.14.2"
+    "@data-client/core": "npm:^0.14.4"
     "@data-client/use-enhanced-reducer": "npm:^0.1.10"
   peerDependencies:
     "@react-navigation/native": ^6.0.0
@@ -59,18 +59,18 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: 10c0/da0605c379e8317b26b8ebea56806a19c41703c17862ec8b14ed67fcf540ce778b8ebae1d531cb2064072efb09cf8f6d6fd06d6b4727a962ae841ccf9e761d45
+  checksum: 10c0/b3731609d8e14b84d6b77a4add205a2aed1348839abcfb659a355d86601d60590d5a5a694d5626a5e78ef630dbfcd5a2a74b5e65e388049aef4b3f7f0fb99087
   languageName: node
   linkType: hard
 
-"@data-client/rest@npm:^0.14.1":
-  version: 0.14.1
-  resolution: "@data-client/rest@npm:0.14.1"
+"@data-client/rest@npm:^0.14.4":
+  version: 0.14.4
+  resolution: "@data-client/rest@npm:0.14.4"
   dependencies:
     "@babel/runtime": "npm:^7.17.0"
-    "@data-client/endpoint": "npm:^0.14.1"
+    "@data-client/endpoint": "npm:^0.14.4"
     path-to-regexp: "npm:^6.2.1"
-  checksum: 10c0/e93817bab8f435247ae1a0f8bc3b9bb3694e19838351a9401395ab4835fa4d453cf3d1f77999bff57e72e7569222ded5f3dd3eef7e239b0ffa82f7bf95c6747b
+  checksum: 10c0/a881521c607c696f6d4ea9cf86332a862c4157d04c651f68a78b1e7d3413429c9b6168b6877541447dd74269b67715f77350e8f31d202e9668fcd736d4a68d53
   languageName: node
   linkType: hard
 
@@ -1447,8 +1447,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "coin@workspace:."
   dependencies:
-    "@data-client/react": "npm:^0.14.2"
-    "@data-client/rest": "npm:^0.14.1"
+    "@data-client/react": "npm:^0.14.4"
+    "@data-client/rest": "npm:^0.14.4"
     "@types/d3": "npm:^7"
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
@@ -1467,7 +1467,7 @@ __metadata:
     react: "npm:19.0.0-rc.0"
     react-dom: "npm:19.0.0-rc.0"
     sass: "npm:^1.77.5"
-    typescript: "npm:^5.5.3"
+    typescript: "npm:^5.5.4"
   languageName: unknown
   linkType: soft
 
@@ -4820,23 +4820,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5.5.3":
-  version: 5.5.3
-  resolution: "typescript@npm:5.5.3"
+"typescript@npm:^5.5.4":
+  version: 5.5.4
+  resolution: "typescript@npm:5.5.4"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/f52c71ccbc7080b034b9d3b72051d563601a4815bf3e39ded188e6ce60813f75dbedf11ad15dd4d32a12996a9ed8c7155b46c93a9b9c9bad1049766fe614bbdd
+  checksum: 10c0/422be60f89e661eab29ac488c974b6cc0a660fb2228003b297c3d10c32c90f3bcffc1009b43876a082515a3c376b1eefcce823d6e78982e6878408b9a923199c
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^5.5.3#optional!builtin<compat/typescript>":
-  version: 5.5.3
-  resolution: "typescript@patch:typescript@npm%3A5.5.3#optional!builtin<compat/typescript>::version=5.5.3&hash=b45daf"
+"typescript@patch:typescript@npm%3A^5.5.4#optional!builtin<compat/typescript>":
+  version: 5.5.4
+  resolution: "typescript@patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=b45daf"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/5a437c416251334deeaf29897157032311f3f126547cfdc4b133768b606cb0e62bcee733bb97cf74c42fe7268801aea1392d8e40988cdef112e9546eba4c03c5
+  checksum: 10c0/10dd9881baba22763de859e8050d6cb6e2db854197495c6f1929b08d1eb2b2b00d0b5d9b0bcee8472f1c3f4a7ef6a5d7ebe0cfd703f853aa5ae465b8404bc1ba
   languageName: node
   linkType: hard
 
