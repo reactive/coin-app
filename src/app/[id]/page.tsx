@@ -20,7 +20,7 @@ export default function AssetDetail({
   const product_id = `${id}-USD`;
   // Preloading for parallelism - https://nextjs.org/docs/app/building-your-application/data-fetching/patterns#preloading-data
   // Unfortunately NextJS does not include a mechanism to do this at the route level, so we will have to use hooks
-  useFetch(StatsResource.get, { id: product_id });
+  useFetch(StatsResource.get, { product_id });
   useFetch(getTicker, { product_id });
   useFetch(getCandles, { product_id });
   const currency = useSuspense(CurrencyResource.get, { id });

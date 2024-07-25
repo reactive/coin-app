@@ -1,4 +1,5 @@
-import { Entity, RestEndpoint } from '@data-client/rest';
+import { Entity, RestEndpoint, schema } from '@data-client/rest';
+import { Stats } from './Stats';
 
 // Visit https://dataclient.io/docs/getting-started/resource to read more about these definitions
 export class Ticker extends Entity {
@@ -12,6 +13,10 @@ export class Ticker extends Entity {
   // volume_24h = '';
   // volume_30d = '';
   open_24h = 0;
+
+  get gain_24() {
+    return (this.price - this.open_24h) / this.open_24h;
+  }
 
   pk(): string {
     return this.product_id;
@@ -62,3 +67,21 @@ export const getTicker = new RestEndpoint({
   channel: 'ticker',
   pollFrequency: 2000,
 });
+
+/** Computes price; falling back to stats data
+ * Stats can be bulk-fetched which makes it good for list views
+ */
+export const queryPrice = new schema.Query(
+  new schema.Object({ ticker: Ticker, stats: Stats }),
+  ({ ticker, stats }) => ticker?.price ?? stats?.last,
+);
+
+/** Computes 24 hour gain; falling back to stats data
+ * Stats can be bulk-fetched which makes it good for list views
+ */
+export const queryGain24 = new schema.Query(
+  new schema.Object({ ticker: Ticker, stats: Stats }),
+  ({ ticker, stats }) => {
+    return ticker?.gain_24 ?? stats?.gain_24 ?? 0;
+  },
+);

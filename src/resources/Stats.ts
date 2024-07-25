@@ -1,7 +1,7 @@
 import { Entity, createResource, schema } from '@data-client/rest';
 
 export class Stats extends Entity {
-  id = '';
+  product_id = '';
   open = 0;
   high = 0;
   low = 0;
@@ -13,8 +13,12 @@ export class Stats extends Entity {
     return this.volume_30day * this.last;
   }
 
+  get gain_24() {
+    return (this.last - this.open) / this.open;
+  }
+
   pk(parent: any, key: string, args: any[]) {
-    return this.id ?? key ?? args[0]?.id;
+    return this.product_id ?? key ?? args[0]?.product_id;
   }
 
   static key = 'Stats';
@@ -28,13 +32,16 @@ export class Stats extends Entity {
   };
 
   process(value: any, parent: any, key: string, args: any[]) {
-    return { ...value, id: value.id ?? key ?? args[0]?.id };
+    return {
+      ...value,
+      product_id: value.product_id ?? key ?? args[0]?.product_id,
+    };
   }
 }
 
 export const StatsResource = createResource({
   urlPrefix: 'https://api.exchange.coinbase.com',
-  path: '/products/:id/stats',
+  path: '/products/:product_id/stats',
   schema: Stats,
 }).extend({
   getList: {

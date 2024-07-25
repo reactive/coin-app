@@ -6,7 +6,7 @@ import { useSuspense } from '@data-client/react';
 import { Gain24 } from '../AssetPrice';
 
 export default function Stats({ id }: { id: string }) {
-  const stats = useSuspense(StatsResource.get, { id });
+  const stats = useSuspense(StatsResource.get, { product_id: id });
   return (
     <table>
       <tbody>

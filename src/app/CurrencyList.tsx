@@ -60,14 +60,10 @@ export default function CurrencyList() {
               {formatLargePrice.format(currency?.stats?.volume_usd)}
             </td>
             <td align="right" width="100">
-              <AsyncBoundary>
-                <AssetPrice product_id={`${currency.id}-USD`} />
-              </AsyncBoundary>
+              <AssetPrice product_id={`${currency.id}-USD`} />
             </td>
             <td align="right" width="100">
-              <AsyncBoundary>
-                <Gain24 product_id={`${currency.id}-USD`} />
-              </AsyncBoundary>
+              <Gain24 product_id={`${currency.id}-USD`} />
             </td>
           </tr>
         ))}
