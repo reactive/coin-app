@@ -72,7 +72,7 @@ export const getTicker = new RestEndpoint({
  * Stats can be bulk-fetched which makes it good for list views
  */
 export const queryPrice = new schema.Query(
-  new schema.Object({ ticker: Ticker, stats: Stats }),
+  { ticker: Ticker, stats: Stats },
   ({ ticker, stats }) => ticker?.price ?? stats?.last,
 );
 
@@ -80,7 +80,7 @@ export const queryPrice = new schema.Query(
  * Stats can be bulk-fetched which makes it good for list views
  */
 export const queryGain24 = new schema.Query(
-  new schema.Object({ ticker: Ticker, stats: Stats }),
+  { ticker: Ticker, stats: Stats },
   ({ ticker, stats }) => {
     return ticker?.gain_24 ?? stats?.gain_24 ?? 0;
   },

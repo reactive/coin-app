@@ -6,7 +6,7 @@ import { getTicker } from '@/resources/Ticker';
 import { AsyncBoundary, useFetch, useSuspense } from '@data-client/react';
 
 import AssetChart from './AssetChart';
-import AssetPrice from './AssetPrice';
+import { Price } from './AssetPrice';
 import styles from './page.module.css';
 import Stats from './Stats';
 
@@ -39,7 +39,7 @@ export default function AssetDetail({
           {currency.name} <small>{currency.display_name}</small>
         </h1>
         <h2>
-          <AssetPrice product_id={`${currency.id}-USD`} />
+          <Price product_id={`${currency.id}-USD`} />
         </h2>
       </header>
       <AsyncBoundary fallback={<div style={{ width, height }}>&nbsp;</div>}>

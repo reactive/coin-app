@@ -11,7 +11,7 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 
-import AssetPrice, { Gain24 } from './AssetPrice';
+import { Price, Gain24 } from './AssetPrice';
 import styles from './CurrencyList.module.scss';
 import { useRouter } from 'next/navigation';
 
@@ -60,7 +60,7 @@ export default function CurrencyList() {
               {formatLargePrice.format(currency?.stats?.volume_usd)}
             </td>
             <td align="right" width="100">
-              <AssetPrice product_id={`${currency.id}-USD`} />
+              <Price product_id={`${currency.id}-USD`} />
             </td>
             <td align="right" width="100">
               <Gain24 product_id={`${currency.id}-USD`} />
