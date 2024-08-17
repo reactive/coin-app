@@ -16,8 +16,8 @@
     "experimentalTernaries": true
   },
   "dependencies": {
-    "@data-client/react": "^0.14.6",
-    "@data-client/rest": "^0.14.6",
+    "@data-client/react": "^0.14.10",
+    "@data-client/rest": "^0.14.10",
     "clsx": "^2.1.1",
     "d3": "^7.9.0",
     "next": "15.0.0-canary.32",

@@ -6,6 +6,7 @@ import {
   getTicker,
 } from '@/resources';
 import { AsyncBoundary, useFetch, useSuspense } from '@data-client/react';
+import Image from 'next/image';
 
 import AssetChart from './AssetChart';
 import { Price } from './AssetPrice';
@@ -30,9 +31,12 @@ export default function AssetDetail({ params: { id } }: Props) {
       <title>{`${currency.name} Prices with Reactive Data Client`}</title>
       <header>
         <h1>
-          <img
+          <Image
             src={currency.icon}
-            style={{ height: '1em', width: '1em', marginBottom: '-.1em' }}
+            style={{ marginBottom: '-.1em' }}
+            width="32"
+            height="32"
+            alt={currency.name}
           />{' '}
           {currency.name} <small>{currency.display_name}</small>
         </h1>

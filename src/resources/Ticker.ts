@@ -21,7 +21,6 @@ export class Ticker extends Entity {
   pk(): string {
     return this.product_id;
   }
-
   // implementing `key` makes us robust against class name mangling
   static key = 'ticker';
 
@@ -66,6 +65,7 @@ export const getTicker = new RestEndpoint({
   schema: Ticker,
   channel: 'ticker',
   pollFrequency: 2000,
+  dataExpiryLength: 5000,
 });
 
 /** Computes price; falling back to stats data

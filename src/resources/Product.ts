@@ -1,4 +1,4 @@
-import { Entity, createResource, schema } from '@data-client/rest';
+import { Entity, resource, schema } from '@data-client/rest';
 
 import { Stats } from './Stats';
 
@@ -11,10 +11,6 @@ export class Product extends Entity {
   trading_disabled = false;
   stats = Stats.fromJS();
 
-  pk(): string {
-    return this.id;
-  }
-
   static key = 'Product';
   static schema = {
     stats: Stats,
@@ -25,7 +21,7 @@ export class Product extends Entity {
   }
 }
 
-export const ProductResource = createResource({
+export const ProductResource = resource({
   urlPrefix: 'https://api.exchange.coinbase.com',
   path: '/products/:id',
   schema: Product,
@@ -49,23 +45,23 @@ export const queryProduct = new schema.Query(
   },
 );
 
-const example = {
-  id: 'ASM-USDT',
-  base_currency: 'ASM',
-  quote_currency: 'USDT',
-  quote_increment: '0.00001',
-  base_increment: '1',
-  display_name: 'ASM/USDT',
-  min_market_funds: '1',
-  margin_enabled: false,
-  post_only: false,
-  limit_only: false,
-  cancel_only: false,
-  status: 'delisted',
-  status_message: '',
-  trading_disabled: true,
-  fx_stablecoin: false,
-  max_slippage_percentage: '0.03000000',
-  auction_mode: false,
-  high_bid_limit_percentage: '',
-};
+// const example = {
+//   id: 'ASM-USDT',
+//   base_currency: 'ASM',
+//   quote_currency: 'USDT',
+//   quote_increment: '0.00001',
+//   base_increment: '1',
+//   display_name: 'ASM/USDT',
+//   min_market_funds: '1',
+//   margin_enabled: false,
+//   post_only: false,
+//   limit_only: false,
+//   cancel_only: false,
+//   status: 'delisted',
+//   status_message: '',
+//   trading_disabled: true,
+//   fx_stablecoin: false,
+//   max_slippage_percentage: '0.03000000',
+//   auction_mode: false,
+//   high_bid_limit_percentage: '',
+// };
