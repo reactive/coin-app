@@ -1,13 +1,3 @@
-import type { Props } from '../Formatted';
-
-export type Formatter = (value: Props['value']) => string;
-
-type Formatters = {
-  [K in Extract<Props['formatter'], string>]: (value: Props['value']) => string;
-} & {
-  default: Formatter;
-};
-
 // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 export const formatPrice = new Intl.NumberFormat('en-US', {
   style: 'currency',
@@ -37,7 +27,7 @@ const percentageFormatter = (value: number) =>
 
 const defaultFormatter = (value: number) => `${value}`;
 
-export const formatters: Formatters = {
+export const formatters = {
   default: defaultFormatter,
   number: numberFormatter,
   currency: currencyFormatter,
