@@ -1,8 +1,6 @@
 import { scaleLinear, scaleTime, line, extent, max, min } from 'd3';
 import { memo, useMemo } from 'react';
 
-import { formatPrice } from '@/components/formatters';
-
 const TICK_LENGTH = 5;
 const AXIS_HEIGHT = 20;
 

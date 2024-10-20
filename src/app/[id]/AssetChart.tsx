@@ -1,15 +1,24 @@
 'use client';
-import { lazy } from 'react';
+import { lazy, useMemo } from 'react';
 
 import { getCandles } from '@/resources/Candles';
 import { useLive } from '@data-client/react';
+import { getTicker } from '@/resources/Ticker';
 
 const LineChart = lazy(() => import(/* webpackPreload: true */ './LineChart'));
 
 export default function AssetChart({ product_id, width, height }: Props) {
   const candles = useLive(getCandles, { product_id });
+  const ticker = useLive(getTicker, { product_id });
 
-  return <LineChart data={candles} width={width} height={height} />;
+  const fullCandles = useMemo(() => {
+    return [
+      { timestamp: ticker.time.getTime() / 1000, price_open: ticker.price },
+      ...candles,
+    ];
+  }, [candles, ticker]);
+
+  return <LineChart data={fullCandles} width={width} height={height} />;
 }
 
 interface Props {

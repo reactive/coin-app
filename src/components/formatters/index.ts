@@ -20,8 +20,6 @@ const percentageFormatter = (value: number) =>
   Intl.NumberFormat('en', {
     style: 'percent',
     minimumFractionDigits: 2,
-    // See: https://github.com/microsoft/TypeScript/issues/36533
-    // @ts-ignore
     signDisplay: 'exceptZero',
   }).format(value);
 

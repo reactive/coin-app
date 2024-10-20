@@ -16,6 +16,7 @@ function AssetPrice({ product_id }: Props) {
         style: 'currency',
         currency: 'USD',
       }}
+      style={{ fontVariantNumeric: 'tabular-nums' }}
     />
   );
 }
