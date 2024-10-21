@@ -1,4 +1,5 @@
 'use client';
+import { use } from 'react';
 import {
   getCandles,
   CurrencyResource,
@@ -15,7 +16,10 @@ import Stats from './Stats';
 
 export const dynamic = 'force-dynamic';
 
-export default function AssetDetail({ params: { id } }: Props) {
+export default function AssetDetail(props: Props) {
+  const params = use(props.params);
+  const { id } = params;
+
   const product_id = `${id}-USD`;
   // Preloading for parallelism - https://nextjs.org/docs/app/building-your-application/data-fetching/patterns#preloading-data
   // Unfortunately NextJS does not include a mechanism to do this at the route level, so we will have to use hooks
@@ -59,5 +63,5 @@ export default function AssetDetail({ params: { id } }: Props) {
 }
 
 interface Props {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }

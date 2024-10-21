@@ -6,7 +6,7 @@ import { isEntity } from './isEntity';
 
 /** Updates crypto data using Coinbase websocket stream
  *
- * https://docs.cloud.coinbase.com/advanced-trade-api/docs/ws-overview
+ * https://docs.cdp.coinbase.com/advanced-trade/docs/ws-overview
  */
 export default class StreamManager implements Manager {
   protected declare websocket: WebSocket; // | EventSource;
