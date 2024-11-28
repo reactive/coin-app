@@ -9,16 +9,16 @@ import { isEntity } from './isEntity';
  * https://docs.cdp.coinbase.com/advanced-trade/docs/ws-overview
  */
 export default class StreamManager implements Manager {
-  protected declare websocket: WebSocket; // | EventSource;
-  protected declare createSocket: () => WebSocket; // | EventSource;
-  protected declare entities: Record<string, typeof Entity>;
+  declare protected websocket: WebSocket; // | EventSource;
+  declare protected createSocket: () => WebSocket; // | EventSource;
+  declare protected entities: Record<string, typeof Entity>;
   protected msgQueue: (string | ArrayBufferLike | Blob | ArrayBufferView)[] =
     [];
 
   protected product_ids: string[] = [];
   protected channels: string[] = [];
   private attempts = 0;
-  protected declare connect: () => void;
+  declare protected connect: () => void;
 
   constructor(
     createSocket: () => WebSocket, // | EventSource,
