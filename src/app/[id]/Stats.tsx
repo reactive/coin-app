@@ -1,8 +1,10 @@
 'use client';
 
+import { useSuspense } from '@data-client/react';
+
 import { formatPrice, formatLargePrice } from '@/components/formatters';
 import { StatsResource } from '@/resources/Stats';
-import { useSuspense } from '@data-client/react';
+
 import { Gain24 } from '../AssetPrice';
 
 export default function Stats({ id }: { id: string }) {

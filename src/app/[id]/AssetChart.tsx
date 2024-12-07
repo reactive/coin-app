@@ -1,8 +1,8 @@
 'use client';
+import { useLive } from '@data-client/react';
 import { lazy, useMemo } from 'react';
 
 import { getCandles } from '@/resources/Candles';
-import { useLive } from '@data-client/react';
 import { getTicker } from '@/resources/Ticker';
 
 const LineChart = lazy(() => import(/* webpackPreload: true */ './LineChart'));

@@ -1,13 +1,14 @@
 'use client';
+import { AsyncBoundary, useFetch, useSuspense } from '@data-client/react';
+import Image from 'next/image';
 import { use } from 'react';
+
 import {
   getCandles,
   CurrencyResource,
   StatsResource,
   getTicker,
 } from '@/resources';
-import { AsyncBoundary, useFetch, useSuspense } from '@data-client/react';
-import Image from 'next/image';
 
 import AssetChart from './AssetChart';
 import { Price } from './AssetPrice';

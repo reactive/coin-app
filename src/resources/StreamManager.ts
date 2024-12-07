@@ -1,7 +1,7 @@
-import type { Entity } from '@data-client/rest';
-
 import type { Manager, Middleware } from '@data-client/react';
 import { Controller, actionTypes } from '@data-client/react';
+import type { Entity } from '@data-client/rest';
+
 import { isEntity } from './isEntity';
 
 /** Updates crypto data using Coinbase websocket stream
@@ -58,7 +58,7 @@ export default class StreamManager implements Manager {
     return next => async action => {
       switch (action.type) {
         case actionTypes.SUBSCRIBE_TYPE:
-        case actionTypes.UNSUBSCRIBE_TYPE:
+        case actionTypes.UNSUBSCRIBE_TYPE: {
           const { schema } = action.endpoint;
           // only process registered entities
           if (schema && isEntity(schema) && schema.key in this.entities) {
@@ -71,9 +71,9 @@ export default class StreamManager implements Manager {
             // consume subscription if we use it
             return Promise.resolve();
           }
-        default:
-          return next(action);
+        }
       }
+      return next(action);
     };
   };
 
@@ -84,6 +84,7 @@ export default class StreamManager implements Manager {
       this.flushSubscribe();
     });
   }
+
   cleanup() {
     // remove our event handler that attempts reconnection
     this.websocket.onclose = null;
@@ -110,6 +111,7 @@ export default class StreamManager implements Manager {
       this.channels.push(channel);
     }
   }
+
   protected unsubscribe(channel: string, product_id: string) {
     this.send(
       JSON.stringify({

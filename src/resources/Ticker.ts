@@ -1,4 +1,5 @@
 import { Entity, RestEndpoint, schema } from '@data-client/rest';
+
 import { Stats } from './Stats';
 
 // Visit https://dataclient.io/docs/getting-started/resource to read more about these definitions
@@ -21,6 +22,7 @@ export class Ticker extends Entity {
   pk(): string {
     return this.product_id;
   }
+
   // implementing `key` makes us robust against class name mangling
   static key = 'ticker';
 

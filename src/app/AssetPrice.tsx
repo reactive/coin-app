@@ -1,8 +1,10 @@
+import { useQuery, useSubscription } from '@data-client/react';
+import { memo } from 'react';
+
 import { formatPrice, formatters } from '@/components/formatters';
 import { getTicker, queryGain24, queryPrice } from '@/resources/Ticker';
-import { useQuery, useSubscription } from '@data-client/react';
+
 import styles from './AssetPrice.module.css';
-import { memo } from 'react';
 
 export const Price = memo(AssetPrice);
 export const Gain24 = memo(AssetGain24);
