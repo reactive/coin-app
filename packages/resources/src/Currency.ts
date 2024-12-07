@@ -73,7 +73,7 @@ export const queryCurrency = new schema.Query(
     );
 
     sorted = sorted.sort((a, b) => {
-      return b.stats?.volume_usd - a.stats?.volume_usd;
+      return (b.stats?.volume_usd ?? 0) - (a.stats?.volume_usd ?? 0);
     });
     return sorted.slice(0, limit);
   },
