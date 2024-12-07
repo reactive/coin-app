@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@coin/resources": "workspace:^",
     "@data-client/react": "^0.14.17",
     "@data-client/rest": "^0.14.17",
     "@number-flow/react": "^0.4.2",

@@ -1,0 +1,12 @@
+{
+  "name": "@coin/resources",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "module": "src/index.ts",
+  "types": "src/index.ts",
+  "dependencies": {
+    "@data-client/rest": "^0.14.17"
+  }
+}

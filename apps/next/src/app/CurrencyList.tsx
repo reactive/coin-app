@@ -1,8 +1,7 @@
 'use client';
+import { CurrencyResource, queryCurrency } from '@coin/resources';
+import { StatsResource } from '@coin/resources';
 import { useFetch, useQuery, useSuspense } from '@data-client/react';
-
-import { CurrencyResource, queryCurrency } from '@/resources/Currency';
-import { StatsResource } from '@/resources/Stats';
 
 import styles from './CurrencyList.module.scss';
 import CurrencyListItem from './CurrencyListItem';

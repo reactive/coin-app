@@ -1,14 +1,11 @@
+import { AsyncBoundary } from '@data-client/react';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-
-import Provider from './Provider';
-
-import './globals.css';
-import { AsyncBoundary } from '@data-client/react';
+import Link from 'next/link';
 
 import styles from './page.module.css';
-
-import Link from 'next/link';
+import Provider from './Provider';
+import './globals.css';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',

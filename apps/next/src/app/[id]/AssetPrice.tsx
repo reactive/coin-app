@@ -1,10 +1,9 @@
 'use client';
 
+import { getTicker } from '@coin/resources';
 import { useLive } from '@data-client/react';
 import NumberFlow from '@number-flow/react';
 import { memo } from 'react';
-
-import { getTicker } from '@/resources/Ticker';
 
 export const Price = memo(AssetPrice);
 

@@ -257,6 +257,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@coin/next@workspace:apps/next"
   dependencies:
+    "@coin/resources": "workspace:^"
     "@data-client/react": "npm:^0.14.17"
     "@data-client/rest": "npm:^0.14.17"
     "@number-flow/react": "npm:^0.4.2"
@@ -270,6 +271,14 @@ __metadata:
     react: "npm:19.0.0"
     react-dom: "npm:19.0.0"
     sass: "npm:^1.80.3"
+  languageName: unknown
+  linkType: soft
+
+"@coin/resources@workspace:^, @coin/resources@workspace:packages/resources":
+  version: 0.0.0-use.local
+  resolution: "@coin/resources@workspace:packages/resources"
+  dependencies:
+    "@data-client/rest": "npm:^0.14.17"
   languageName: unknown
   linkType: soft
 

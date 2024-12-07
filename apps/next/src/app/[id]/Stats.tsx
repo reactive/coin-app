@@ -1,9 +1,9 @@
 'use client';
 
+import { StatsResource } from '@coin/resources';
 import { useSuspense } from '@data-client/react';
 
 import { formatPrice, formatLargePrice } from '@/components/formatters';
-import { StatsResource } from '@/resources/Stats';
 
 import { Gain24 } from '../AssetPrice';
 

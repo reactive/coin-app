@@ -1,8 +1,8 @@
+import { getTicker, queryGain24, queryPrice } from '@coin/resources';
 import { useQuery, useSubscription } from '@data-client/react';
 import { memo } from 'react';
 
 import { formatPrice, formatters } from '@/components/formatters';
-import { getTicker, queryGain24, queryPrice } from '@/resources/Ticker';
 
 import styles from './AssetPrice.module.css';
 
