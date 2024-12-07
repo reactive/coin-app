@@ -6,7 +6,7 @@ import { useFetch, useQuery, useSuspense } from '@data-client/react';
 import styles from './CurrencyList.module.scss';
 import CurrencyListItem from './CurrencyListItem';
 
-export default function CurrencyList() {
+export function CurrencyList() {
   useFetch(StatsResource.getList);
   useSuspense(CurrencyResource.getList);
   useSuspense(StatsResource.getList);

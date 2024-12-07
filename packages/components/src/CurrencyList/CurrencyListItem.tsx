@@ -1,14 +1,13 @@
 'use client';
 import { type Currency } from '@coin/resources';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import { memo } from 'react';
-
-import { formatLargePrice } from '@/components/formatters';
 
 import { Price, Gain24 } from './AssetPrice';
 import styles from './CurrencyList.module.scss';
+import { formatLargePrice } from '../formatters';
+import Image from '../platform/Image';
+import Link from '../platform/Link';
+import { useRouter } from '../platform/navigation';
 
 function CurrencyListItem({ currency }: { currency: Currency }) {
   const router = useRouter();

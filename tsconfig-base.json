@@ -14,13 +14,15 @@
     "jsx": "react-jsx",
     "incremental": true,
     "composite": true,
+    "types": [
+      "@anansi/webpack-config/types"
+    ],
   },
   "include": ["packages/*/src"],
   "exclude": [
     "node_modules",
     "dist",
     "lib",
-    "ts3.4",
     "coverage"
   ]
 }

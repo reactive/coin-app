@@ -3,7 +3,7 @@ import { useRef, useEffect } from 'react';
 
 import styles from './LoadingBar.module.css';
 
-const LoadingBar = ({
+export const LoadingBar = ({
   duration,
   loading,
 }: {
@@ -63,5 +63,3 @@ LoadingBar.defaults = {
   duration: 200,
   loading: false,
 };
-
-export default LoadingBar;

@@ -1,13 +1,10 @@
 'use client';
-
 import { StatsResource } from '@coin/resources';
 import { useSuspense } from '@data-client/react';
 
-import { formatPrice, formatLargePrice } from '@/components/formatters';
+import { Gain24, formatPrice, formatLargePrice } from '@coin/components';
 
-import { Gain24 } from '../AssetPrice';
-
-export default function Stats({ id }: { id: string }) {
+export function Stats({ id }: { id: string }) {
   const stats = useSuspense(StatsResource.get, { product_id: id });
   return (
     <table>

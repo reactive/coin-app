@@ -5,7 +5,7 @@ import { lazy, useMemo } from 'react';
 
 const LineChart = lazy(() => import(/* webpackPreload: true */ './LineChart'));
 
-export default function AssetChart({ product_id, width, height }: Props) {
+export function AssetChart({ product_id, width, height }: Props) {
   const candles = useLive(getCandles, { product_id });
   const ticker = useLive(getTicker, { product_id });
 

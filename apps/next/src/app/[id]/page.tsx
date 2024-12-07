@@ -1,4 +1,5 @@
 'use client';
+import { Price, AssetChart, Stats } from '@coin/components';
 import {
   getCandles,
   CurrencyResource,
@@ -9,10 +10,7 @@ import { AsyncBoundary, useFetch, useSuspense } from '@data-client/react';
 import Image from 'next/image';
 import { use } from 'react';
 
-import AssetChart from './AssetChart';
-import { Price } from './AssetPrice';
 import styles from './page.module.css';
-import Stats from './Stats';
 
 export const dynamic = 'force-dynamic';
 

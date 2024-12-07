@@ -1,4 +1,4 @@
-import CurrencyList from './CurrencyList';
+import { CurrencyList } from '@coin/components';
 
 export const dynamic = 'force-dynamic';
 

@@ -1,0 +1,17 @@
+{
+  "name": "@coin/components",
+  "description": "Framework independent components",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "module": "src/index.ts",
+  "types": "src/index.ts",
+  "dependencies": {
+    "@coin/resources": "workspace:^"
+  },
+  "peerDependencies": {
+    "@data-client/react": "*",
+    "react": "*"
+  }
+}

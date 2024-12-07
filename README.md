@@ -4,7 +4,12 @@ This is a [Reactive Data Client](https://dataclient.io/) project demonstrating u
 
 Check the [apps](./apps) directory for different frameworks.
 
+- [NextJS](./apps/next/)
+
 [packages](./packages) contains shared code used among all frameworks.
+
+- [@coin/resources](./packages/resources/)
+- [@coin/components](./packages/components/)
 
 ## Learn More
 
