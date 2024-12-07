@@ -1413,6 +1413,7 @@ __metadata:
   dependencies:
     "@coin/components": "workspace:^"
     "@coin/resources": "workspace:^"
+    "@coin/stream": "workspace:^"
     "@data-client/react": "npm:^0.14.17"
     "@data-client/rest": "npm:^0.14.17"
     "@number-flow/react": "npm:^0.4.2"
@@ -1434,6 +1435,14 @@ __metadata:
   resolution: "@coin/resources@workspace:packages/resources"
   dependencies:
     "@data-client/rest": "npm:^0.14.17"
+  languageName: unknown
+  linkType: soft
+
+"@coin/stream@workspace:^, @coin/stream@workspace:packages/stream":
+  version: 0.0.0-use.local
+  resolution: "@coin/stream@workspace:packages/stream"
+  peerDependencies:
+    "@data-client/react": "*"
   languageName: unknown
   linkType: soft
 

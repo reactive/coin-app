@@ -4,5 +4,7 @@
   "references": [
     { "path": "./apps/next/tsconfig.json" },
     { "path": "./packages/resources/tsconfig.json" },
+    { "path": "./packages/components/tsconfig.json" },
+    { "path": "./packages/stream/tsconfig.json" },
   ]
 }

@@ -1,6 +1,10 @@
-import type { Manager, Middleware } from '@data-client/react';
-import { Controller, actionTypes } from '@data-client/react';
-import type { Entity } from '@data-client/rest';
+import type {
+  Controller,
+  Manager,
+  Middleware,
+  EntityInterface,
+} from '@data-client/react';
+import { actionTypes } from '@data-client/react';
 
 import { isEntity } from './isEntity';
 
@@ -8,10 +12,10 @@ import { isEntity } from './isEntity';
  *
  * https://docs.cdp.coinbase.com/advanced-trade/docs/ws-overview
  */
-export default class StreamManager implements Manager {
+export class StreamManager implements Manager {
   declare protected websocket: WebSocket; // | EventSource;
   declare protected createSocket: () => WebSocket; // | EventSource;
-  declare protected entities: Record<string, typeof Entity>;
+  declare protected entities: Record<string, EntityInterface>;
   protected msgQueue: (string | ArrayBufferLike | Blob | ArrayBufferView)[] =
     [];
 
@@ -22,7 +26,7 @@ export default class StreamManager implements Manager {
 
   constructor(
     createSocket: () => WebSocket, // | EventSource,
-    entities: Record<string, typeof Entity>,
+    entities: Record<string, EntityInterface>,
   ) {
     this.entities = entities;
     this.createSocket = createSocket;

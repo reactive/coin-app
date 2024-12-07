@@ -10,6 +10,7 @@ Check the [apps](./apps) directory for different frameworks.
 
 - [@coin/resources](./packages/resources/)
 - [@coin/components](./packages/components/)
+- [@coin/stream](./packages/stream/)
 
 ## Learn More
 

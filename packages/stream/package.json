@@ -1,0 +1,13 @@
+{
+  "name": "@coin/stream",
+  "description": "Websocket stream",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "module": "src/index.ts",
+  "types": "src/index.ts",
+  "peerDependencies": {
+    "@data-client/react": "*"
+  }
+}

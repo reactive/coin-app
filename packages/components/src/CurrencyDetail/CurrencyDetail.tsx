@@ -2,8 +2,9 @@
 import { CurrencyResource } from '@coin/resources';
 import { AsyncBoundary, useSuspense } from '@data-client/react';
 
-import { Price, AssetChart, Stats } from '@coin/components';
+import { AssetChart, Stats } from '@coin/components';
 
+import { Price } from './AssetPrice';
 import styles from './CurrencyDetail.module.css';
 import Image from '../platform/Image';
 

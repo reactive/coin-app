@@ -1,8 +1,7 @@
 'use client';
 import { Ticker } from '@coin/resources';
+import { StreamManager } from '@coin/stream';
 import { getDefaultManagers, actionTypes } from '@data-client/react';
-
-import StreamManager from '@/resources/StreamManager';
 
 export default function getManagers() {
   const mgrs = getDefaultManagers({
