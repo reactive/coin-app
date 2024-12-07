@@ -1,20 +1,12 @@
 'use client';
-import { Price, AssetChart, Stats } from '@coin/components';
-import {
-  getCandles,
-  CurrencyResource,
-  StatsResource,
-  getTicker,
-} from '@coin/resources';
-import { AsyncBoundary, useFetch, useSuspense } from '@data-client/react';
-import Image from 'next/image';
+import { CurrencyDetail } from '@coin/components';
+import { getCandles, StatsResource, getTicker } from '@coin/resources';
+import { useFetch } from '@data-client/react';
 import { use } from 'react';
-
-import styles from './page.module.css';
 
 export const dynamic = 'force-dynamic';
 
-export default function AssetDetail(props: Props) {
+export default function AssetDetailPage(props: Props) {
   const params = use(props.params);
   const { id } = params;
 
@@ -24,40 +16,10 @@ export default function AssetDetail(props: Props) {
   useFetch(StatsResource.get, { product_id });
   useFetch(getTicker, { product_id });
   useFetch(getCandles, { product_id });
-  const currency = useSuspense(CurrencyResource.get, { id });
   const width = 600;
   const height = 400;
 
-  return (
-    <>
-      <title>{`${currency.name} Prices with Reactive Data Client`}</title>
-      <header>
-        <h1>
-          <Image
-            src={currency.icon}
-            style={{ marginBottom: '-.1em' }}
-            width="32"
-            height="32"
-            alt={currency.name}
-          />{' '}
-          {currency.name} <small>{currency.display_name}</small>
-        </h1>
-        <h2>
-          <Price product_id={`${currency.id}-USD`} />
-        </h2>
-      </header>
-      <AsyncBoundary fallback={<div style={{ width, height }}>&nbsp;</div>}>
-        <AssetChart
-          product_id={`${currency.id}-USD`}
-          width={width}
-          height={height}
-        />
-      </AsyncBoundary>
-      <section className={styles.statSection}>
-        <Stats id={`${currency.id}-USD`} />
-      </section>
-    </>
-  );
+  return <CurrencyDetail width={width} height={height} id={id} />;
 }
 
 interface Props {

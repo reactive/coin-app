@@ -1,5 +1,4 @@
 'use client';
-
 import { getTicker } from '@coin/resources';
 import { useLive } from '@data-client/react';
 import NumberFlow from '@number-flow/react';

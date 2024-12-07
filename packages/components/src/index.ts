@@ -4,3 +4,4 @@ export * from './CurrencyList/AssetPrice';
 export * from './formatters';
 export * from './CurrencyDetail/Stats';
 export * from './CurrencyDetail/AssetChart';
+export * from './CurrencyDetail/CurrencyDetail';
