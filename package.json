@@ -2,12 +2,10 @@
   "name": "coin",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "prettier": {
     "printWidth": 80,
     "semi": true,
@@ -15,28 +13,13 @@
     "arrowParens": "avoid",
     "experimentalTernaries": true
   },
-  "dependencies": {
-    "@data-client/react": "^0.14.17",
-    "@data-client/rest": "^0.14.17",
-    "@number-flow/react": "^0.4.2",
-    "clsx": "^2.1.1",
-    "d3": "^7.9.0",
-    "next": "15.0.4",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
-    "sass": "^1.80.3"
-  },
+  "packageManager": "yarn@4.5.3",
   "devDependencies": {
     "@anansi/eslint-plugin": "1.0.19",
     "@babel/core": "^7.26.0",
     "@types/babel__core": "^7",
-    "@types/d3": "^7",
-    "@types/node": "^22.10.1",
-    "@types/react": "^19.0.1",
-    "@types/react-dom": "^19.0.1",
     "eslint": "^9.16.0",
     "prettier": "^3.4.2",
     "typescript": "^5.7.2"
-  },
-  "packageManager": "yarn@4.5.3"
+  }
 }

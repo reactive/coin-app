@@ -1,10 +1,20 @@
-This is a [Reactive Data Client](https://dataclient.io/) project demonstrating usage with different frameworks.
+This is a [Reactive Data Client](https://dataclient.io/) project integrating [Next.js](https://nextjs.org/) Server Side Rendering.
 
 ## Getting Started
 
-Check the [apps](./apps) directory for different frameworks.
+First, run the development server:
 
-[packages](./packages) contains shared code used among all frameworks.
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to see the result.
+
+## Stackblitz
+
+[Preview this demo in your browser](https://stackblitz.com/github/reactive/coin-app?file=src%2Fapp%2FCurrencyList.tsx)
+
+[See this in production](https://coin-app-lake.vercel.app/)
 
 ## Learn More
 
