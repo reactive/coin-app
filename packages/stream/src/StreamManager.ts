@@ -15,7 +15,7 @@ import { isEntity } from './isEntity';
 export class StreamManager implements Manager {
   declare protected websocket: WebSocket; // | EventSource;
   declare protected createSocket: () => WebSocket; // | EventSource;
-  declare protected entities: Record<string, EntityInterface>;
+  declare protected entities: Map<string, EntityInterface>;
   protected msgQueue: (string | ArrayBufferLike | Blob | ArrayBufferView)[] =
     [];
 
@@ -28,7 +28,7 @@ export class StreamManager implements Manager {
     createSocket: () => WebSocket, // | EventSource,
     entities: Record<string, EntityInterface>,
   ) {
-    this.entities = entities;
+    this.entities = new Map(Object.entries(entities));
     this.createSocket = createSocket;
   }
 
@@ -65,7 +65,7 @@ export class StreamManager implements Manager {
         case actionTypes.UNSUBSCRIBE_TYPE: {
           const { schema } = action.endpoint;
           // only process registered entities
-          if (schema && isEntity(schema) && schema.key in this.entities) {
+          if (schema && isEntity(schema) && this.entities.has(schema.key)) {
             if (action.type === actionTypes.SUBSCRIBE_TYPE) {
               this.subscribe(schema.key, action.args[0]?.product_id);
             } else {
@@ -145,8 +145,8 @@ export class StreamManager implements Manager {
    * @param msg JSON parsed message
    */
   protected handleMessage(ctrl: Controller, msg: any) {
-    if (msg.type in this.entities) {
-      ctrl.set(this.entities[msg.type], msg, msg);
+    if (this.entities.has(msg.type)) {
+      ctrl.set(this.entities.get(msg.type) as EntityInterface, msg, msg);
     }
   }
 
